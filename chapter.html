@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="home-button">Home</a>
+            <h1 id="chapter-title">Chapter</h1>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Top Navigation -->
+        <div class="navigation">
+            <button id="prev-chapter">Previous Chapter</button>
+            <select id="chapter-select"></select>
+            <button id="next-chapter">Next Chapter</button>
+        </div>
+
+        <!-- Manga Pages -->
+        <div id="pages"></div>
+
+        <!-- Bottom Navigation -->
+        <div class="navigation">
+            <button id="prev-chapter-bottom">Previous Chapter</button>
+            <select id="chapter-select-bottom"></select>
+            <button id="next-chapter-bottom">Next Chapter</button>
+        </div>
+
+        <!-- Donation and Discord Buttons -->
+        <div class="donation-discord">
+            <div>
+                <a href="https://www.paypal.com/donate" target="_blank">Donate</a>
+                <span class="donation-text">Please consider donating to help keep the site up</span>
+            </div>
+            <a href="https://discord.gg/your-invite-link" target="_blank">Join Our Discord</a>
+        </div>
+    </div>
+    <script src="chapter-script.js"></script>
+</body>
+</html>

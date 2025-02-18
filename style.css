@@ -1,0 +1,184 @@
+/* Light Mode (Default) */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: #fff;
+    --button-bg: #6c757d;
+    --button-hover-bg: #5a6268;
+    --button-text: #fff;
+    --chapter-link-bg: #6c757d;
+    --chapter-link-hover-bg: #5a6268;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --container-bg: #1e1e1e;
+    --button-bg: #495057;
+    --button-hover-bg: #343a40;
+    --button-text: #e0e0e0;
+    --chapter-link-bg: #495057;
+    --chapter-link-hover-bg: #343a40;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dark-mode-toggle,
+.home-button {
+    padding: 10px 20px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    #dark-mode-toggle:hover,
+    .home-button:hover {
+        background: var(--button-hover-bg);
+    }
+
+#chapter-select-home {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+}
+
+/* Banner Image */
+.banner {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+#chapters {
+    margin-top: 20px;
+}
+
+.chapter-link {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background: var(--chapter-link-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+    .chapter-link:hover {
+        background: var(--chapter-link-hover-bg);
+    }
+
+/* Chapter Page Styles */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+    .navigation button {
+        padding: 10px 20px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .navigation button:hover {
+            background: var(--button-hover-bg);
+        }
+
+    .navigation select {
+        padding: 10px;
+        border-radius: 5px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+    }
+
+#pages img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Donation and Discord Buttons */
+.donation-discord {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+    .donation-discord a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .donation-discord a:hover {
+            background: var(--button-hover-bg);
+        }
+
+.donation-text {
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
