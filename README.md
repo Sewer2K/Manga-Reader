@@ -3,6 +3,7 @@
 A simple and modern web application to read manga online. This project fetches manga data from the [MangaDex API](https://api.mangadex.org/) and allows users to read chapters seamlessly. It supports dark mode, responsive design, and quick chapter navigation.
 
 ![Screenshot of the Manga Reader](Screenshot.png) <!-- Add a screenshot if you have one -->
+![Screenshot of the Manga Reader](Screenshot2.png) <!-- Add a screenshot if you have one -->
 
 ## Features
 
