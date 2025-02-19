@@ -8,6 +8,8 @@
     --button-text: #fff;
     --chapter-link-bg: #6c757d;
     --chapter-link-hover-bg: #5a6268;
+    --read-chapter-bg: #796694; /* Green background for read chapters */
+    --read-chapter-text: #fff; /* White text for read chapters */
 }
 
 /* Dark Mode */
@@ -20,6 +22,8 @@
     --button-text: #e0e0e0;
     --chapter-link-bg: #495057;
     --chapter-link-hover-bg: #343a40;
+    --read-chapter-bg: #796694; /* Darker green for dark mode */
+    --read-chapter-text: #e0e0e0;
 }
 
 body {
@@ -117,6 +121,11 @@ h1 {
 
     .chapter-link:hover {
         background: var(--chapter-link-hover-bg);
+    }
+
+    .chapter-link.read {
+        background: var(--read-chapter-bg);
+        color: var(--read-chapter-text);
     }
 
 /* Chapter Page Styles */

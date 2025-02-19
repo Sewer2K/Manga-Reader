@@ -7,6 +7,8 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     body.dataset.theme = savedTheme;
     darkModeToggle.textContent = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+} else {
+    darkModeToggle.textContent = '🌙 Dark Mode'; // Default text
 }
 
 darkModeToggle.addEventListener('click', () => {
@@ -15,6 +17,19 @@ darkModeToggle.addEventListener('click', () => {
     darkModeToggle.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
     localStorage.setItem('theme', newTheme); // Save preference
 });
+
+// Track read chapters
+const readChapters = JSON.parse(localStorage.getItem('readChapters')) || [];
+
+// Get chapter ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const chapterId = urlParams.get('chapter');
+
+// Mark the chapter as read
+if (chapterId && !readChapters.includes(chapterId)) {
+    readChapters.push(chapterId);
+    localStorage.setItem('readChapters', JSON.stringify(readChapters));
+}
 
 // Fetch chapter pages
 async function fetchChapterPages(chapterId) {
@@ -42,9 +57,6 @@ async function fetchChapterPages(chapterId) {
     }
 }
 
-// Get chapter ID from URL
-const urlParams = new URLSearchParams(window.location.search);
-const chapterId = urlParams.get('chapter');
 fetchChapterPages(chapterId);
 
 // Navigation functionality

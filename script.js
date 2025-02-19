@@ -18,6 +18,9 @@ darkModeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme); // Save preference
 });
 
+// Track read chapters
+const readChapters = JSON.parse(localStorage.getItem('readChapters')) || [];
+
 // Fetch manga chapters (English only)
 async function fetchMangaChapters() {
     const mangaId = 'b0b721ff-c388-4486-aa0f-c2b0bb321512'; // Frieren manga ID
@@ -45,6 +48,20 @@ async function fetchMangaChapters() {
             chapterLink.href = `chapter.html?chapter=${chapter.id}`;
             chapterLink.textContent = `Chapter ${chapter.attributes.chapter}`;
             chapterLink.classList.add('chapter-link');
+
+            // Check if the chapter has been read
+            if (readChapters.includes(chapter.id)) {
+                chapterLink.classList.add('read');
+            }
+
+            // Add click event to mark chapter as read
+            chapterLink.addEventListener('click', () => {
+                if (!readChapters.includes(chapter.id)) {
+                    readChapters.push(chapter.id);
+                    localStorage.setItem('readChapters', JSON.stringify(readChapters));
+                }
+            });
+
             chaptersContainer.appendChild(chapterLink);
         });
 
