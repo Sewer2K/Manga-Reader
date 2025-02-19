@@ -29,6 +29,7 @@ By default, the site displays chapters for *Frieren: Beyond Journey's End*. You 
 1. **Find the Manga ID**:
    - Go to [MangaDex](https://mangadex.org/) and search for the manga you want to display.
    - Copy the manga ID from the URL. For example, the ID for *Frieren: Beyond Journey's End* is `b0b721ff-c388-4486-aa0f-c2b0bb321512`.
+   ![The ID is in the url as shown below](Screenshot3.png) 
 
 2. **Update the Code**:
    - Open `script.js` and `chapter-script.js` in your code editor.
